@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 1</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Bunt</h1>
+    <form id="sumForm" onsubmit="return submitForm3()">
+        <label for="gap">Gap:(based on your team)</label>
+        <select id="gap" name="gap" required>
+            <option value="">Select the gap</option>
+            <option value="5">-3</option>
+            <option value="6">-2</option>
+            <option value="7">-1</option>
+            <option value="8">0</option>
+            <option value="9">1</option>
+            <option value="10">2</option>
+            <option value="11">3</option>
+        </select>
+
+        <label for="inning">Inning:</label>
+        <select id="inning" name="inning" required>
+            <option value="">Select the inning</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <label for="half">Half:</label>
+        <select id="half" name="half" required>
+            <option value="">Select the half</option>
+            <option value="0">top</option>
+            <option value="1">bottom</option>
+        </select>
+
+        <label for="cond">Outs and Bases:</label>
+        <select id="cond" name="cond" required>
+            <option value="">Outs and bases</option>
+            <option value="0">0 out 1</option>
+            <option value="1">1 out 1</option>
+            <option value="2">0 out 12</option>
+            <option value="3">0 out 2</option>
+        </select>
+
+        <label for="value1">Better PCT:</label>
+        <input type="number" id="better" name="better" min="0" max="100" required oninput="calculateValue3()"><br>
+
+        <label for="value2">Success Bunt PCT:</label>
+        <input type="number" id="success" name="success" min="0" max="100" required oninput="calculateValue3()"><br>
+
+        <label for="value3">Worse PCT:</label>
+        <input type="number" id="worse" name="worse" disabled><br>
+
+        <button type="submit">Submit</button>
+    </form>
+    <div id="results"></div>
+    <button onclick="goToPage('homepage.html')">Go to Homepage</button>
+    <script>
+        function calculateValue3() {
+            const value1 = parseFloat(document.getElementById('better').value);
+            const value2 = parseFloat(document.getElementById('success').value);
+
+            const value3 = 100 - value1 - value2;
+            document.getElementById('worse').value = value3;
+        }
+
+        document.getElementById('sumForm').addEventListener('submit', function(event) {
+            const value3 = parseFloat(document.getElementById('worse').value);
+            if (value3 < 0) {
+                alert("Value 3 should be greater than or equal to 0.");
+                event.preventDefault(); // Prevent form submission if value3 is less than 0
+            }
+        });
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Steal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Steal Bases</h1>
+    <p>The lower the last number is, the more you should steal bases.But if the difference of WPCT is too small, the last number may be inaccurate.</p>
+
+    <form onsubmit="return submitForm2()">
+        <label for="gap">Gap:(based on your team)</label>
+        <select id="gap" name="gap" required>
+            <option value="">Select the gap</option>
+            <option value="5">-3</option>
+            <option value="6">-2</option>
+            <option value="7">-1</option>
+            <option value="8">0</option>
+            <option value="9">1</option>
+            <option value="10">2</option>
+            <option value="11">3</option>
+        </select>
+
+        <label for="inning">Inning:</label>
+        <select id="inning" name="inning" required>
+            <option value="">Select the inning</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <label for="half">Half:</label>
+        <select id="half" name="half" required>
+            <option value="">Select the half</option>
+            <option value="0">top</option>
+            <option value="1">bottom</option>
+        </select>
+
+        <label for="outs">Outs:</label>
+        <select id="outs" name="outs" required>
+            <option value="">How many outs</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+
+        <label for="bases">Bases:</label>
+        <select id="bases" name="bases" required>
+            <option value="">What's the bases</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+    <div id="results"></div>
+    <button onclick="goToPage('homepage.html')">Go to Homepage</button>
+
+    <script src="script.js"></script>
+</body>
+</html>

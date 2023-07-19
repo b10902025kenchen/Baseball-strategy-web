@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>IBB</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>IBB</h1>
+    <p>In most cases, IBB lowers WPCT. But if the difference is small, avoid facing good batters may be clever.</p>
+
+    <form onsubmit="return submitForm()">
+        <label for="gap">Gap:(based on your team)</label>
+        <select id="gap" name="gap" required>
+            <option value="">Select the gap</option>
+            <option value="5">-3</option>
+            <option value="6">-2</option>
+            <option value="7">-1</option>
+            <option value="8">0</option>
+            <option value="9">1</option>
+            <option value="10">2</option>
+            <option value="11">3</option>
+        </select>
+
+        <label for="inning">Inning:</label>
+        <select id="inning" name="inning" required>
+            <option value="">Select the inning</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+        </select>
+
+        <label for="half">Half:</label>
+        <select id="half" name="half" required>
+            <option value="">Select the half</option>
+            <option value="0">top</option>
+            <option value="1">bottom</option>
+        </select>
+
+        <label for="outs">Outs:</label>
+        <select id="outs" name="outs" required>
+            <option value="">How many outs</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+        </select>
+
+        <label for="bases">Bases:</label>
+        <select id="bases" name="bases" required>
+            <option value="">What's the bases</option>
+            <option value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">12</option>
+            <option value="5">13</option>
+            <option value="6">23</option>
+            <option value="7">123</option>
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+
+    <div id="results"></div>
+    <button onclick="goToPage('homepage.html')">Back to Home</button>
+    <script src="script.js"></script>
+</body>
+</html>
