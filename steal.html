@@ -6,19 +6,19 @@
 </head>
 <body>
     <h1>Steal Bases</h1>
-    <p>The lower the last number is, the more you should steal bases.But if the difference of WPCT is too small, the last number may be inaccurate.</p>
+    <p>The lower the last number is, the more you should steal bases. But if the difference of WPCT is too small, the last number may be inaccurate.</p>
 
     <form onsubmit="return submitForm2()">
-        <label for="gap">Gap:(based on your team)</label>
+        <label for="gap">Gap(based on your team):</label>
         <select id="gap" name="gap" required>
             <option value="">Select the gap</option>
-            <option value="5">-3</option>
-            <option value="6">-2</option>
-            <option value="7">-1</option>
-            <option value="8">0</option>
-            <option value="9">1</option>
-            <option value="10">2</option>
-            <option value="11">3</option>
+            <option value="5">down by 3</option>
+            <option value="6">down by 2</option>
+            <option value="7">down by 1</option>
+            <option value="8">tie</option>
+            <option value="9">lead by 1</option>
+            <option value="10">lead by 2</option>
+            <option value="11">lead by 3</option>
         </select>
 
         <label for="inning">Inning:</label>

@@ -7,16 +7,16 @@
 <body>
     <h1>Bunt</h1>
     <form id="sumForm" onsubmit="return submitForm3()">
-        <label for="gap">Gap:(based on your team)</label>
+        <label for="gap">Gap(based on your team):</label>
         <select id="gap" name="gap" required>
             <option value="">Select the gap</option>
-            <option value="5">-3</option>
-            <option value="6">-2</option>
-            <option value="7">-1</option>
-            <option value="8">0</option>
-            <option value="9">1</option>
-            <option value="10">2</option>
-            <option value="11">3</option>
+            <option value="5">down by 3</option>
+            <option value="6">down by 2</option>
+            <option value="7">down by 1</option>
+            <option value="8">tie</option>
+            <option value="9">lead by 1</option>
+            <option value="10">lead by 2</option>
+            <option value="11">lead by 3</option>
         </select>
 
         <label for="inning">Inning:</label>
@@ -43,19 +43,19 @@
         <label for="cond">Outs and Bases:</label>
         <select id="cond" name="cond" required>
             <option value="">Outs and bases</option>
-            <option value="0">0 out 1</option>
-            <option value="1">1 out 1</option>
-            <option value="2">0 out 12</option>
-            <option value="3">0 out 2</option>
+            <option value="0">0 out 1 on base</option>
+            <option value="1">1 out 1 on base</option>
+            <option value="2">0 out 12 on base</option>
+            <option value="3">0 out 2 on base</option>
         </select>
 
-        <label for="value1">Better PCT:</label>
+        <label for="value1">Probability of better than a success sacrifice bunt(%):</label>
         <input type="number" id="better" name="better" min="0" max="100" required oninput="calculateValue3()"><br>
 
-        <label for="value2">Success Bunt PCT:</label>
+        <label for="value2">Probability of a success sacrifice bunt(%):</label>
         <input type="number" id="success" name="success" min="0" max="100" required oninput="calculateValue3()"><br>
 
-        <label for="value3">Worse PCT:</label>
+        <label for="value3">Probability of worse than a success sacrifice bunt(%):</label>
         <input type="number" id="worse" name="worse" disabled><br>
 
         <button type="submit">Submit</button>

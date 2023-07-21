@@ -178,8 +178,8 @@ function submitForm() {
 
     const formData = `
     <p>
-        <strong>Current WPCT:</strong> ${val1}<br>
-        <strong>After IBB WPCT:</strong> ${val2}<br>
+        <strong>Current winning percentage:</strong> ${val1}<br>
+        <strong>After IBB winning percentage:</strong> ${val2}<br>
     </p>
     `;
 
@@ -371,9 +371,9 @@ function submitForm2() {
 
     const formData = `
     <p>
-        <strong>Current WPCT: </strong>${val1} <br>
-        <strong>Success Steal WPCT: </strong>${val2} <br>
-        <strong>Fail to Steal WPCT: </strong>${val3} <br>
+        <strong>Current winning percentage: </strong>${val1} <br>
+        <strong>Success Steal winning percentage: </strong>${val2} <br>
+        <strong>Fail to Steal sinning percentage: </strong>${val3} <br>
         <strong>Steal if you have at least </strong>${val4}<strong> % to success </strong><br>
     </p>
 
@@ -683,9 +683,9 @@ function submitForm3() {
 
     const formData = `
     <p>
-        <strong>Current WPCT: </strong>${val1} <br>
-        <strong>After bunt WPCT: </strong>${val2} <br>
-        <strong>100% success bunt WPCT: </strong>${val3} <br>
+        <strong>Current winning percentage: </strong>${val1} <br>
+        <strong>After bunt winning percentage: </strong>${val2} <br>
+        <strong>100% success bunt winning percentage: </strong>${val3} <br>
     </p>
 
     `;
