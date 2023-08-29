@@ -25,7 +25,7 @@ function calculate(gap, inning, half, outs, bases)
         90.84, 94.95, 100.0, 100.0, 100.0, 100.0],
        [0.0, 0.0, 0.0, 0.0, 7.51, 13.55, 22.63, 34.48, 52.47, 69.56, 81.13,
         88.66, 93.8, 100.0, 100.0, 100.0, 100.0],
-       [0.0, 0.0, 0.0, 0.0, 9.09, 15.85, 26.31, 40.57, 60.24, 77.64, 97.49,
+       [0.0, 0.0, 0.0, 0.0, 9.09, 15.85, 26.31, 40.57, 60.24, 77.64, 87.49,
         93.3, 96.41, 100.0, 100.0, 100.0, 100.0],
        [0.0, 0.0, 0.0, 0.0, 5.1, 9.5, 18.03, 30.36, 52.22, 73.11, 84.84, 91.71,
         95.72, 100.0, 100.0, 100.0, 100.0],
@@ -311,7 +311,8 @@ function calculate2(gap, inning, half, outs, bases)
         val2 = P24[outs * 8 + num1][0] * WPCT_away[inning * 2 - 2][gap] + P24[outs * 8 + num1][1] * WPCT_away[inning * 2 - 2][gap+1] +
             P24[outs * 8 + num1][2] * WPCT_away[inning * 2 - 2][gap+2] + P24[outs * 8 + num1][3] * WPCT_away[inning * 2 - 2][gap+3] + P24[outs * 8 + num1][4] * WPCT_away[inning * 2 - 2][gap+4];
         var num2 = 0;
-        val3 = P24[outs * 8 + num2][0] * WPCT_away[inning * 2 - 2][gap] + P24[outs * 8 + num2][1] * WPCT_away[inning * 2 - 2][gap+1] +
+        if(outs === 2) val3 = WPCT_away[inning * 2 - 2][gap];
+        else val3 = P24[outs * 8 + num2][0] * WPCT_away[inning * 2 - 2][gap] + P24[outs * 8 + num2][1] * WPCT_away[inning * 2 - 2][gap+1] +
         P24[outs * 8 + num2][2] * WPCT_away[inning * 2 - 2][gap+2] + P24[outs * 8 + num2][3] * WPCT_away[inning * 2 - 2][gap+3] + P24[outs * 8 + num2][4] * WPCT_away[inning * 2 - 2][gap+4];
     }
     else
@@ -322,7 +323,8 @@ function calculate2(gap, inning, half, outs, bases)
         val2 = P24[outs * 8 + num1][0] * WPCT_home[inning * 2 - 1][gap] + P24[outs * 8 + num1][1] * WPCT_home[inning * 2 - 1][gap+1] +
             P24[outs * 8 + num1][2] * WPCT_home[inning * 2 - 1][gap+2] + P24[outs * 8 + num1][3] * WPCT_home[inning * 2 - 1][gap+3] + P24[outs * 8 + num1][4] * WPCT_home[inning * 2 - 1][gap+4];
         var num2 = 0;
-        val3 = P24[outs * 8 + num2][0] * WPCT_home[inning * 2 - 1][gap] + P24[outs * 8 + num2][1] * WPCT_home[inning * 2 - 1][gap+1] +
+        if(outs == 2) val3 = WPCT_home[inning * 2 - 2][gap];
+        else val3 = P24[outs * 8 + num2][0] * WPCT_home[inning * 2 - 1][gap] + P24[outs * 8 + num2][1] * WPCT_home[inning * 2 - 1][gap+1] +
         P24[outs * 8 + num2][2] * WPCT_home[inning * 2 - 1][gap+2] + P24[outs * 8 + num2][3] * WPCT_home[inning * 2 - 1][gap+3] + P24[outs * 8 + num2][4] * WPCT_home[inning * 2 - 1][gap+4];
     }
 
@@ -373,7 +375,7 @@ function submitForm2() {
     <p>
         <strong>Current winning percentage: </strong>${val1} <br>
         <strong>Success Steal winning percentage: </strong>${val2} <br>
-        <strong>Fail to Steal sinning percentage: </strong>${val3} <br>
+        <strong>Fail to Steal winning percentage: </strong>${val3} <br>
         <strong>Steal if you have at least </strong>${val4}<strong> % to success </strong><br>
     </p>
 
