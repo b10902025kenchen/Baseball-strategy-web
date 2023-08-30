@@ -323,7 +323,7 @@ function calculate2(gap, inning, half, outs, bases)
         val2 = P24[outs * 8 + num1][0] * WPCT_home[inning * 2 - 1][gap] + P24[outs * 8 + num1][1] * WPCT_home[inning * 2 - 1][gap+1] +
             P24[outs * 8 + num1][2] * WPCT_home[inning * 2 - 1][gap+2] + P24[outs * 8 + num1][3] * WPCT_home[inning * 2 - 1][gap+3] + P24[outs * 8 + num1][4] * WPCT_home[inning * 2 - 1][gap+4];
         var num2 = 0;
-        if(outs == 2) val3 = WPCT_home[inning * 2 - 2][gap];
+        if(outs == 2) val3 = WPCT_home[inning * 2 - 1][gap];
         else val3 = P24[outs * 8 + num2][0] * WPCT_home[inning * 2 - 1][gap] + P24[outs * 8 + num2][1] * WPCT_home[inning * 2 - 1][gap+1] +
         P24[outs * 8 + num2][2] * WPCT_home[inning * 2 - 1][gap+2] + P24[outs * 8 + num2][3] * WPCT_home[inning * 2 - 1][gap+3] + P24[outs * 8 + num2][4] * WPCT_home[inning * 2 - 1][gap+4];
     }
